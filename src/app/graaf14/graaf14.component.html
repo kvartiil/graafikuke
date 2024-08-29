@@ -1,0 +1,38 @@
+
+<div class="tekstselgit6">
+Tegevusala valimine
+</div>
+<div class="tekstselgit9">
+  
+  </div>
+<select [formControl]="dropdown" class="container2">
+  <!--select [formControl]="dropdown" class="container2" name="options2[1]" [(ngModel)]="options2[1]"-->
+  <!---option value="">Choose your city</option--->
+  <!--span>{{ valik }}</span-->
+  <option value="null" hidden disabled>{{valdkonnake}}</option>
+  <option [value]="option" *ngFor="let  option of options2">{{option}}</option>
+</select> 
+{{ muudaVaartust() }}
+
+<div class="asukoht">
+  <div echarts [options]="options" class="yld1-chart"></div>
+  </div>
+{{ valdkonnake }}
+  <br><br><br><br>
+  {{ paneAndmed() }}
+  
+  {{ valdkonnaandmed }}
+  <br><br><br><br><br>
+
+  <select>
+    <option>Select</option>
+      <option *ngFor="let item of this.dataList;let i = index" value="{{item.code}}" [selected]="i == 1">
+        {{item.name}}
+      </option>
+    </select>
+
+  <!--[selected]="option[3]" 
+  
+  [value]="x.id" [selected]="car.color.id == x.id"
+  
+  -->
